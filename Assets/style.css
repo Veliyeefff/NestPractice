@@ -667,10 +667,15 @@ hr{
     position: absolute;
     top: 0;
     left: 0;
+    width: 0px;
     z-index: 1000;
     background-color: white;
+    padding: 0px;
+    transition: 0.5s;
+}
+.sidebar-active{
+    width: 350px;
     padding: 30px 20px;
-    display: none;
 }
 .sidebar .sidebar-image{
     display: flex;
@@ -720,6 +725,11 @@ hr{
 .sidebar .sidebar-list ul{
     list-style: none;
     margin-top: 20px;
+    padding: 0;
+}
+.sidebar .sidebar-list ul ul{
+    margin-left: 3rem;
+    display: none;
 }
 .sidebar .sidebar-list ul li{
     display: flex;
@@ -773,9 +783,6 @@ hr{
         display: none;
     }
     hr{
-        display: none;
-    }
-    .sidebar{
         display: none;
     }
     .sidebar .sidebar-list ul hr{

@@ -24,10 +24,27 @@ categories.addEventListener("click",function(){
 let menu = document.querySelector(".fa-bars")
 let sidebar = document.querySelector(".sidebar")
 menu.addEventListener("click",function(){
-    sidebar.classList.add("active")
+    sidebar.classList.add("sidebar-active")
 })
 
 let exit = document.querySelector(".menu-exit")
 exit.addEventListener("click",function(){
-    sidebar.classList.remove("active")
+    sidebar.classList.remove("sidebar-active")
 })
+
+//Sidebar Toggle
+
+let sidebararrow = document.querySelectorAll(".sidebararrow")
+let lists = document.querySelectorAll(".lists")
+
+
+sidebararrow.forEach(element => {
+    lists.forEach(element => {
+        element.classList.remove("active")
+    })
+    element.addEventListener("click",function(e){
+        e.target.parentElement.nextElementSibling.classList.toggle("active")
+    })
+
+})
+
