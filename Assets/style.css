@@ -1,0 +1,784 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+/* Navbar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin:1rem 9rem;
+    
+}
+nav .fa-bars{
+    display: none;
+}
+
+nav .nav-image img{
+    width: 190px;
+    height: 80px;
+    cursor: pointer;
+}
+
+nav .nav-input{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+/* Nav-input */
+nav .nav-input{
+    border: 2px solid rgba(2, 172, 2, 0.418) ;
+    padding: 15px 30px;
+    border-radius: 3px;
+    position: relative;
+}
+nav .nav-input .nav-categories{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+nav .nav-input .nav-categories i{
+    color: rgb(204, 205, 206);
+    font-size: 0.6rem;
+    margin-left: 5px;
+}
+nav .nav-input .nav-categories span{
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+nav .nav-input .nav-categories .categories-menu{
+    flex-direction: column;
+    height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    display: none;
+    z-index: 100;
+}
+nav .nav-input .nav-categories .categories-menu input{
+    outline: none;
+    border: 1px solid rgba(6, 197, 133, 0.418) !important ;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+nav .nav-input .nav-categories .categories-menu ul{
+    list-style: none !important;
+}
+
+nav .nav-input .nav-categories .categories-menu  ul li a{
+    color: black;
+    font-size: 0.8rem;
+    text-decoration: none;
+
+}
+nav .nav-input .nav-categories .categories-menu  ul li{
+    padding: 7px;
+}
+
+nav .nav-input .nav-categories .categories-menu  ul li:hover{
+    background-color:rgb(55, 218, 169)!important ;
+    color: white;
+}
+
+
+nav .nav-input .nav-search input{
+    border: none;
+    outline: none;
+    border-left:1px solid rgb(187, 187, 187) ;
+    padding-left: 10px;
+    height: 20px;
+    width: 400px;
+}
+
+
+
+/* Nav-Location */
+nav .nav-location{
+    position: relative;
+}
+
+nav .nav-location button{
+    background-color: white;
+    border: 1px solid rgb(212, 212, 212);
+    padding: 10px 15px;
+    color: rgb(175, 175, 175);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+nav .nav-location .location-menu{
+    position: absolute;
+    flex-direction: column;
+    height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    display: none;
+    z-index: 100;
+}
+
+nav .nav-location .location-menu input{
+    outline: none;
+    border: 1px solid rgba(6, 197, 133, 0.418) !important ;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+nav .nav-location .location-menu ul{
+    list-style: none !important;
+}
+nav .nav-location .location-menu  ul li{
+    cursor: pointer;
+}
+
+nav .nav-location .location-menu  ul li a{
+    color: black;
+    font-size: 0.8rem;
+    text-decoration: none;
+
+}
+nav .nav-location .location-menu  ul li{
+    padding: 7px;
+}
+
+nav .nav-location  ul li:hover{
+    background-color:rgb(55, 218, 169)!important ;
+    color: white;
+}
+nav .nav-location button i{
+    margin:0px 2px;
+}
+
+nav .nav-location button span{
+    color: rgb(2, 172, 2);
+    margin: 0px 2px;
+}
+
+nav .nav-location button:hover{
+    transform: translateY(-6px);
+}
+/* Nav-List */
+nav .nav-list{
+    position: relative;
+}
+nav .nav-list ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+}
+ .nav-list ul a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-right: 15px;
+    color: rgb(144, 144, 144);
+}
+
+nav .nav-list ul a i{
+    color: black;
+    font-size: 1.4rem;
+    
+}
+nav .nav-list .card1{
+    position: relative;
+}
+
+nav .nav-list .card-hover{
+    background-color: white;
+    border: 1px solid rgba(214, 214, 214, 0.835);
+    padding: 20px 15px;
+    border-radius: 5px;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 1px;
+    z-index: 10000000;
+}
+nav .nav-list .card1:hover .card-hover {
+    display: block;
+}
+nav .nav-list .card-hover .img1{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+nav .nav-list .card-hover .img1 .price{
+    margin-left: 10px;
+}
+nav .nav-list .card-hover .tot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .nav-list .card-hover .tot .dollar{
+    color: rgb(2, 172, 121);
+    font-weight: 700;
+}
+
+nav .nav-list .card-hover .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+nav .nav-list .card-hover .buttons .view{
+    color: rgb(2, 172, 121);
+    background-color: white;
+    border: 2px solid rgb(2, 172, 121);
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+nav .nav-list .card-hover .buttons .view:hover{
+    color: white;
+    background-color: rgb(253, 172, 22);
+}
+nav .nav-list .card-hover .buttons .check{
+    color: white;
+    background-color: rgb(2, 172, 121);
+    border: 2px solid rgb(2, 172, 121);
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+nav .nav-list .card-hover .buttons .check:hover{
+    color: white;
+    background-color: rgb(253, 172, 22);
+}
+nav .nav-list .card-hover .img1 .price p{
+    margin-bottom: 0;
+    color: rgb(55, 218, 169);
+}
+nav .nav-list .card-hover .img1 .price p i{
+    color: black;
+    margin-left: 20px;
+}
+
+nav .nav-list .card-hover  img{
+    width: 70px;
+}
+
+nav .nav-list .account-hover ul{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(211, 210, 210);
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 1px;
+    z-index: 10000000;
+    transition-duration:10s ;
+}
+nav .nav-list .account-hover ul li{
+    margin-top: 10px;
+}
+nav .nav-list .account-hover ul li a i{
+    margin-right: 10px;
+}
+.user:hover .account-hover ul{
+    display: block;
+
+ }
+ .account-hover ul li:hover a{
+    color: rgb(55, 218, 169);
+ }
+ .account-hover ul:hover{
+     display: block;
+ }
+hr{
+    background-color: rgb(223, 222, 222);
+    border: none;
+    height: 1px;
+}
+
+.active{
+    display: block!important;
+}
+
+/* nav2 */
+
+.nav2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav2 .nav2-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav2 .nav2-left button{
+    background-color:rgb(2, 172, 121) ;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.nav2 .nav2-left button i{
+    margin-right: 5px;
+}
+.nav2 .nav2-left button{
+    position: relative;
+}
+
+.nav2 .nav2-left ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.nav2 .nav2-left .row{
+    background-color: white;
+    border: 1px solid rgb(55, 218, 169);
+    border-radius: 10px;
+    position: absolute;
+    top: 73px;
+    left: 11px;
+    width: 30%;
+    height: max-content;
+    padding: 20px;
+    display: none;
+}
+.active-flex{
+    display: flex !important;
+}
+.nav2 .nav2-left .row .col-12{
+    text-align: center;
+
+}
+.nav2 .nav2-left .row .col-12 i{
+    border: 1px solid rgb(26, 170, 38);
+    font-size: 0.7rem;
+    border-radius: 100%;
+    padding: 3px;
+    color: rgb(26, 170, 38);
+    font-weight: bold;
+}
+.nav2 .nav2-left .row .col-12 span{
+    font-weight: 700;
+}
+.nav2 .nav2-left .categ-menu .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+    border: 1px solid rgba(177, 180, 179, 0.329);
+    border-radius: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+.nav2 .nav2-left .categ-menu .item span{
+    transition: 0.4s;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.nav2 .nav2-left .categ-menu .item:hover{
+    border: 1px solid rgba(55, 218, 169, 0.698);
+}
+.nav2 .nav2-left .categ-menu .item:hover span{
+    color: rgb(55, 218, 169);
+}
+.nav2 .nav2-left .categ-menu .item img{
+    width: 30px;
+    margin-right: 5px;
+}
+
+.nav2 .nav2-left ul li{
+    margin-left: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.nav2 .nav2-left ul li:hover span{
+    color: rgb(55, 218, 169);
+}
+.nav2 .nav2-left ul li .fa-angle-down{
+    cursor: pointer;
+    font-size: 0.6rem;
+    margin-left: 5px;
+}
+.nav2 .nav2-left ul li .fa-fire{
+    color: rgb(55, 218, 169);
+    margin-right: 7px;
+}
+
+.nav2 .nav2-right{
+    display: flex;
+    align-items: center;
+}
+
+.nav2 .nav2-right .headphones i{
+    font-size: 1.8rem;
+    margin-right: 7px;
+}
+.nav2 .nav2-right .text1 .phone{
+    color: rgb(55, 218, 169);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.nav2 .nav2-right .text1 p{
+    font-size: 0.8rem;
+    margin: 0;
+}
+.nav2 .nav2-left ul .home{
+    position: relative;
+}
+.nav2 .nav2-left ul .home .home-active ul{
+    padding: 15px 20px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(211, 210, 210);
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 23px;
+    right: 1px;
+    z-index: 10000000;
+}
+.nav2 .nav2-left ul .home:hover .home-active ul{
+    display: block;
+}
+.nav2 .nav2-left ul .home .home-active ul:hover{
+    display: block;
+
+}
+.nav2 .nav2-left ul .home .home-active ul li:hover {
+    color: rgb(55, 218, 169);
+}
+
+.nav2 .nav2-left ul .home .home-active ul li{
+    margin-top: 10px;
+}
+.nav2 .nav2-left ul .shop{
+    position: relative;
+}
+
+.nav2 .nav2-left ul .shop .shop-active ul{
+    padding: 15px 20px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(211, 210, 210);
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 23px;
+    z-index: 10000000;
+}
+.nav2 .nav2-left ul .shop:hover .shop-active ul{
+    display: block;
+}
+.nav2 .nav2-left ul .shop .shop-active ul:hover{
+    display: block;
+
+}
+.nav2 .nav2-left ul .shop .shop-active ul li:hover {
+    color: rgb(55, 218, 169);
+}
+.nav2 .nav2-left ul .shop .shop-active ul li{
+    margin-top: 10px;
+}
+.nav2 .nav2-left ul .wendors{
+    position: relative;
+}
+
+.nav2 .nav2-left ul .wendors .wendors-active ul{
+    padding: 15px 20px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(211, 210, 210);
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 23px;
+    z-index: 10000000;
+}
+.nav2 .nav2-left ul .wendors:hover .wendors-active ul{
+    display: block;
+}
+.nav2 .nav2-left ul .wendors .wendors-active ul:hover{
+    display: block;
+
+}
+.nav2 .nav2-left ul .wendors .wendors-active ul li:hover {
+    color: rgb(55, 218, 169);
+}
+.nav2 .nav2-left ul .wendors .wendors-active ul li{
+    margin-top: 10px;
+}
+
+.nav2 .nav2-left ul .blog{
+    position: relative;
+}
+
+.nav2 .nav2-left ul .blog .blog-active ul{
+    padding: 15px 20px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(211, 210, 210);
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 23px;
+    z-index: 10000000;
+}
+.nav2 .nav2-left ul .blog:hover .blog-active ul{
+    display: block;
+}
+.nav2 .nav2-left ul .blog .blog-active ul:hover{
+    display: block;
+
+}
+.nav2 .nav2-left ul .blog .blog-active ul li:hover {
+    color: rgb(55, 218, 169);
+}
+.nav2 .nav2-left ul .blog .blog-active ul li{
+    margin-top: 10px;
+}
+
+.nav2 .nav2-left ul .pages{
+    position: relative;
+}
+
+.nav2 .nav2-left ul .pages .pages-active ul{
+    padding: 15px 20px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(211, 210, 210);
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 23px;
+    z-index: 10000000;
+}
+.nav2 .nav2-left ul .pages:hover .pages-active ul{
+    display: block;
+}
+.nav2 .nav2-left ul .pages .pages-active ul:hover{
+    display: block;
+
+}
+.nav2 .nav2-left ul .pages .pages-active ul li:hover {
+    color: rgb(55, 218, 169);
+}
+.nav2 .nav2-left ul .pages .pages-active ul li{
+    margin-top: 10px;
+}
+
+.nav2{
+    position: relative;
+}
+
+.nav2 .nav2-left ul .menu .menu-active ul .head{
+    color: rgb(55, 218, 169);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+.nav2 .nav2-left ul .menu .menu-active{
+    width: 100%;
+    display: flex;
+    padding: 15px 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(211, 210, 210);
+    position: absolute;
+    top: 40px;
+    left: 23px;
+    z-index: 10000000;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+}
+.nav2 .nav2-left ul .menu .menu-active ul{
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    display: flex;
+
+}
+.nav2 .nav2-left ul .menu:hover .menu-active {
+    display: flex;
+}
+.nav2 .nav2-left ul .menu:hover .menu-active img{
+    display: flex;
+}
+.nav2 .nav2-left ul .menu .menu-active ul:hover{
+    display: flex;
+
+}
+.nav2 .nav2-left ul .menu .menu-active ul li:hover {
+    color: rgb(55, 218, 169);
+}
+.nav2 .nav2-left ul .menu .menu-active ul .head:hover{
+    color: orange;
+}
+.nav2 .nav2-left ul .menu .menu-active ul li{
+    margin-top: 10px;
+}
+
+.sidebar{
+    width: 360px;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    padding: 30px 20px;
+    display: none;
+}
+.sidebar .sidebar-image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.sidebar .sidebar-image img{
+    width: 100px;
+}
+.sidebar .sidebar-image i{
+    background-color: aquamarine;
+    padding: 8px;
+    border-radius: 100%;
+}
+
+.sidebar .sidebar-text{
+    color: rgb(209, 209, 209);
+    margin-top: 20px;
+}
+
+.sidebar .sidebar-searchs{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(230, 227, 227);
+    padding: 10px;
+    border-radius: 4px;
+}
+.sidebar .sidebar-searchs .sidebar-search input{
+    border:none;
+    outline:none;
+    background-color: rgb(230, 227, 227)
+}
+.sidebar .sidebar-icons{
+    margin-top: 20px;
+}
+.sidebar .sidebar-icons i{
+    background-color: rgb(2, 172, 121);
+    padding: 7px;
+    border-radius: 100%;
+    color: white;
+}
+
+.sidebar .sidebar-list ul{
+    list-style: none;
+    margin-top: 20px;
+}
+.sidebar .sidebar-list ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1700px){
+    nav .nav-location button{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1500px){
+    nav .nav-list{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1081px){
+    .nav2 .nav2-right{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    nav .fa-bars{
+        display: block;
+        font-size: 2rem;
+    }
+    nav .nav-image img{
+        width: 150px;
+        margin-left: 2rem;
+    }
+    nav .nav-input{
+        display: none;
+    }
+    nav .nav-list{
+        display: block;
+    }
+    nav .nav-list ul .comp{
+        display: none;
+    }
+    nav .nav-list ul .user{
+        display: none;
+    }
+    nav .nav-list ul li span{
+        display: none;
+    }
+    .nav2{
+        display: none;
+    }
+    hr{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .sidebar .sidebar-list ul hr{
+        display: block;
+    }
+}
